@@ -1,0 +1,40 @@
+.form {
+    padding: 11%;
+    font-weight: 500;
+}
+
+.col .d-flex {
+    height: 100%;
+}
+
+.row-cols-1 {
+    mdb-form-control {
+        margin-bottom: 1rem;
+        position: relative;
+
+        i {
+            position: absolute;
+            right: 14px;
+            top: 22px;
+            color: darkgreen;
+        }
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+.flex-column {
+    i {
+        margin-right: 1rem;
+        color: #1266f1;
+    }
+}
+
+.heading {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: normal;
+}

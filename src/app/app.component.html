@@ -1,0 +1,104 @@
+<div class="app-root">
+  <app-header></app-header>
+
+  <main>
+    <div class="container">
+      <div class="row form">
+        <div class="col">
+          <div class="d-flex flex-column justify-content-evenly align-items-start">
+            <h1 class="heading">Create an account</h1>
+            <div>
+
+              <i class="fas fa-shield-alt fa-lg"></i>Secure payments through reliable partner
+            </div>
+            <div><i class="fas fa-exchange-alt fa-lg"></i>Fast transfer </div>
+            <div><i class="fas fa-percent fa-lg"></i>Fair commission</div>
+            <div><i class="fas fa-chart-line fa-lg"></i>Best available rates</div>
+            <div><i class="far fa-thumbs-up fa-lg"></i>Convenience </div>
+          </div>
+        </div>
+        <div class="col-5">
+          <!-- <input type="text" id="name" name="name" class="form-control" 
+          required minlength="4" appForbiddenName="bob"
+            [(ngModel)]="user" #name="ngModel">
+
+          <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
+
+            <div *ngIf="name.errors?.['required']">
+              Name is required.
+            </div>
+            <div *ngIf="name.errors?.['minlength']">
+              Name must be at least 4 characters long.
+            </div>
+            <div *ngIf="name.errors?.['forbiddenName']">
+              Name cannot be Bob.
+            </div>
+
+          </div> -->
+
+          <div class="row row-cols-1">
+            <div class="col">
+              <mdb-form-control>
+                <input mdbInput type="text" id="name" [(ngModel)]="formData.name" #name="ngModel"
+                  class="form-control form-control-lg" required />
+                <label mdbLabel class="form-label" for="name">Full Name</label>
+                <i class="fas fa-check fa-lg" *ngIf="!name.invalid && (name.dirty || name.touched)"></i>
+              </mdb-form-control>
+            </div>
+            <div class="col">
+              <mdb-form-control>
+                <input mdbInput required type="email" id="email" name="email" class="form-control form-control-lg"
+                  maxlength="255" [(ngModel)]="formData.email" #email="ngModel" />
+                <label mdbLabel class="form-label" for="email">Email Address</label>
+                <i class="fas fa-check fa-lg" *ngIf="!email.invalid && (email.dirty || email.touched)"></i>
+              </mdb-form-control>
+            </div>
+            <div class="col">
+              <mdb-form-control>
+                <input mdbInput required maxlength="255" [(ngModel)]="formData.phone" #phone="ngModel" type="tel"
+                  id="phone" class="form-control form-control-lg" maxlength="15" />
+                <label mdbLabel class="form-label" for="phone">Phone Number</label>
+                <i class="fas fa-check fa-lg" *ngIf="!phone.invalid && (phone.dirty || phone.touched)"></i>
+              </mdb-form-control>
+            </div>
+            <div class="col">
+              <mdb-form-control>
+                <input mdbInput required maxlength="255" [(ngModel)]="formData.password" #password="ngModel"
+                  type="password" id="pwd" class="form-control form-control-lg" />
+                <label mdbLabel class="form-label" for="pwd">Password</label>
+                <i class="fas fa-check fa-lg" *ngIf="!password.invalid && (password.dirty || password.touched)"></i>
+              </mdb-form-control>
+            </div>
+            <div class="col">
+              <mdb-form-control>
+                <input mdbInput required maxlength="255" [(ngModel)]="formData.dob" #dob="ngModel"
+                  [matDatepicker]="picker" (click)="picker.open()" id="dob" class="form-control form-control-lg" />
+                <label mdbLabel class="form-label" for="dob">Date of birth</label>
+                <mat-datepicker #picker touchUi>
+                  <mat-datepicker-actions>
+                    <button mat-button matDatepickerCancel>Cancel</button>
+                    <button mat-raised-button color="primary" matDatepickerApply>Set Date</button>
+                  </mat-datepicker-actions>
+                </mat-datepicker>
+                <i class="fas fa-check fa-lg" *ngIf="!dob.invalid && (dob.dirty || dob.touched)"></i>
+              </mdb-form-control>
+
+            </div>
+            <div class="col">
+              <button type="button" class="btn btn-primary btn-lg">Sign up</button>
+            </div>
+            <div class="col">
+              <div class=" form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1"><small>I agree to our Terms of Service and Privacy
+                    Policy</small> </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+</div>
